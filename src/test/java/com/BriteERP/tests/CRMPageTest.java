@@ -38,6 +38,7 @@ public class CRMPageTest extends TestBase {
         double total2 = BriteERPUtils.convertNums(pages.crmpage().expectedRevenueTotalPivot.getText());
         extentLogger.info("Confirming totals from List & Pivot view are equal.");
         Assert.assertEquals(total1, total2);
+
         extentLogger.info("Clicking new button in pivot view table");
         pages.crmpage().newButtonPivotTable.click();
         extentLogger.info("CLicking on to arrange accoding to opportunities");
@@ -52,6 +53,7 @@ public class CRMPageTest extends TestBase {
         double specifiedCustomerListTotal = BriteERPUtils.convertNums(pages.crmpage().specifiedCusListTotal(firstCustomerName).getText());
         extentLogger.info("Confirming if totals match");
         Assert.assertEquals(firstCustomerPivotTotal,specifiedCustomerListTotal);
+
         extentLogger.info("Clicking on PivotView again");
         pages.crmpage().pivotView.click();
         extentLogger.info("Getting the total of Opportunities");

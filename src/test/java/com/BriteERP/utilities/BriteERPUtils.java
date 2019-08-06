@@ -15,7 +15,7 @@ public class BriteERPUtils {
     }
 
 
-    // converts BriteERP numsTo Int
+    // converts BriteERP nums to Double
     public static double convertNums(String num){
         while(num.contains(",")){
             num = num.replace(",","");
